@@ -1,0 +1,84 @@
+Arguments: 
+  /usr/local/bin/node /usr/local/bin/yarn config get npmScopes --json
+
+PATH: 
+  /Users/jihoobyeon/TEE-CLC-14.135.3:/Library/Java/JavaVirtualMachines/temurin-11.jdk/Contents/Home/bin:/Users/jihoobyeon/.yarn/bin:/Users/jihoobyeon/.config/yarn/global/node_modules/.bin:/Users/jihoobyeon/.rbenv/shims:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands
+
+Yarn version: 
+  1.22.18
+
+Node version: 
+  18.15.0
+
+Platform: 
+  darwin arm64
+
+Trace: 
+  SyntaxError: /Users/jihoobyeon/Desktop/foo/node_modules/@babylonjs/react-native/package.json: Unexpected token } in JSON at position 898
+      at JSON.parse (<anonymous>)
+      at /usr/local/lib/node_modules/yarn/lib/cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (/usr/local/lib/node_modules/yarn/lib/cli.js:310:30)
+      at /usr/local/lib/node_modules/yarn/lib/cli.js:321:13
+
+npm manifest: 
+  {
+      "name": "@babylonjs/react-native",
+      "title": "React Native Babylon",
+      "version": "1.5.1",
+      "description": "Babylon Native integration into React Native",
+      "main": "index.js",
+      "scripts": {
+          "test": "echo \"Error: no test specified\" && exit 1"
+      },
+      "repository": {
+          "type": "git",
+          "url": "git+https://github.com/babylonjs/BabylonReactNative.git",
+          "baseUrl": "https://github.com/babylonjs/BabylonReactNative"
+      },
+      "keywords": [
+          "react-native"
+      ],
+      "author": {
+          "name": "Your Name",
+          "email": "yourname@email.com"
+      },
+      "homepage": "https://github.com/BabylonJS/BabylonReactNative#readme",
+      "license": "MIT",
+      "licenseFilename": "LICENSE",
+      "readmeFilename": "README.md",
+      "dependencies": {
+          "base-64": "^0.1.0",
+          "semver": "^7.3.2",
+          "react-native-babylon-shared": 
+      },
+      "peerDependencies": {
+          "@babylonjs/core": "^5.42.2",
+          "react": ">=16.13.1",
+          "react-native": ">=0.63.1"
+      },
+      "devDependencies": {
+          "@babel/core": "^7.8.4",
+          "@babel/runtime": "^7.8.4",
+          "@babylonjs/core": "5.42.2",
+          "@rnw-scripts/eslint-config": "0.1.6",
+          "@rnw-scripts/ts-config": "0.1.0",
+          "@types/base-64": "^0.1.3",
+          "@types/jest": "^25.2.1",
+          "@types/react": "^16.9.32",
+          "@types/react-native": "^0.63.1",
+          "@types/react-test-renderer": "^16.9.2",
+          "@types/semver": "^7.3.4",
+          "eslint": "7.12.0",
+          "just-scripts": "^0.44.7",
+          "metro-react-native-babel-preset": "^0.56.0",
+          "prettier": "1.19.1",
+          "typescript": "^4.3.5"
+      }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
