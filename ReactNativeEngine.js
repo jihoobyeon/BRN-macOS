@@ -8,7 +8,7 @@ export class ReactNativeEngine extends NativeEngine {
             return null;
         }
         // This waits Graphics/NativeEngine to be created.
-        BabylonNative.initializationPromise;
+        await BabylonNative.initializationPromise;
         // Check for cancellation.
         if (abortSignal.aborted) {
             return null;
