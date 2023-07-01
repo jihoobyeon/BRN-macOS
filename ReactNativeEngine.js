@@ -1,6 +1,5 @@
 import { ensureInitialized, reset } from './BabylonModule';
 import { NativeEngine } from '@babylonjs/core';
-
 export class ReactNativeEngine extends NativeEngine {
     _isDisposed = false;
     static async tryCreateAsync(abortSignal) {

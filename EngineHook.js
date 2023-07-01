@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react';
 import { Platform } from 'react-native';
+
 import { Color4, Tools } from '@babylonjs/core';
 import { ReactNativeEngine } from './ReactNativeEngine';
 import { ensureInitialized } from './BabylonModule';
 import * as base64 from 'base-64';
-import codegenNativeCommands from "react-native-macos/Libraries/Utilities/codegenNativeCommands";
 // These are errors that are normally thrown by WebXR's requestSession, so we should throw the same errors under similar circumstances so app code can be written the same for browser or native.
 // https://developer.mozilla.org/en-US/docs/Web/API/XRSystem/requestSession
 // https://developer.mozilla.org/en-US/docs/Web/API/DOMException#Error_names
@@ -22,6 +22,13 @@ class DOMException {
     get code() { return this.error; }
     get name() { return DOMError[this.error]; }
 }
+// Requests the camera permission and throws if the permission could not be granted
+async function requestCameraPermissionAsync() {
+    return;
+}
+// Override the WebXRSessionManager.initializeSessionAsync to insert a camera permissions request. It would be cleaner to do this directly in the native XR implementation, but there are a couple problems with that:
+// 1. React Native does not provide a way to hook into the permissions request result (at least on Android).
+// 2. If it is done on the native side, then we need one implementation per platform.
 
 ensureInitialized().then();
 

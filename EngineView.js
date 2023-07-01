@@ -74,7 +74,6 @@ export const EngineView = (props) => {
             snapshotPromise.current = undefined;
         }
     }, []);
-
     if (initialized !== false) {
         return (React.createElement(View, { style: [{ flex: 1 }, props.style, { overflow: "hidden" }] },
             initialized && React.createElement(NativeEngineView, { ref: engineViewRef, style: { flex: 1 }, onSnapshotDataReturned: snapshotDataReturnedHandler, isTransparent: isTransparent, antiAliasing: antiAliasing, androidView: androidView }),
