@@ -9,17 +9,17 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/babylonjs/BabylonReactNative.git",
-        "baseUrl": "https://github.com/babylonjs/BabylonReactNative"
+        "url": "git+https://github.com/jihoobyeon/BRN-macOS.git",
+        "baseUrl": "https://github.com/jihoobyeon/BRN-macOS"
     },
     "keywords": [
         "react-native"
     ],
     "author": {
-        "name": "Your Name",
-        "email": "yourname@email.com"
+        "name": "Jihoo Byeon",
+        "email": "jihoobyeon@gmail.com"
     },
-    "homepage": "https://github.com/BabylonJS/BabylonReactNative#readme",
+    "homepage": "https://github.com/jihoobyeon/BRN-macOS",
     "license": "MIT",
     "licenseFilename": "LICENSE",
     "readmeFilename": "README.md",
@@ -30,8 +30,7 @@
     "peerDependencies": {
         "@babylonjs/core": "^5.42.2",
         "react": ">=16.13.1",
-        "react-native": ">=0.63.1",
-        "react-native-permissions": "^3.0.0"
+        "react-native": ">=0.63.1"
     },
     "devDependencies": {
         "@babel/core": "^7.8.4",
@@ -43,7 +42,6 @@
         "@types/jest": "^25.2.1",
         "@types/react": "^16.9.32",
         "@types/react-native": "^0.63.1",
-        "@types/react-native-permissions": "^2.0.0",
         "@types/react-test-renderer": "^16.9.2",
         "@types/semver": "^7.3.4",
         "eslint": "7.12.0",
