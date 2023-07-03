@@ -1,6 +1,5 @@
 import { Engine } from '@babylonjs/core';
 import { Nullable } from '@babylonjs/core/types';
-import { Engine } from '@babylonjs/core/Engines/engine';
 import { ReactNativeEngine } from '@babylonjs/react-native';
 
 declare function useEngine(): Engine | undefined;
