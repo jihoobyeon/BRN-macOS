@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { Component, useEffect, useState } from 'react';
 import { Platform } from 'react-native';
 
 import { Color4, Tools } from '@babylonjs/core';
@@ -105,6 +105,7 @@ if (!console.time) {
         });
     }
 }
+
 export function useEngine() {
     const [engine, setEngine] = useState();
     useEffect(() => {
@@ -121,5 +122,32 @@ export function useEngine() {
         };
     }, []);
     return engine;
+}
+
+export function withEngine(MyComponent) {
+    return class EngineWrapper extends Component {
+        constructor(props) {
+            super(props);
+            this.state = { abortController: new AbortController(), engine: undefined };
+        }
+
+        async componentDidMount() {
+            let newEngine;
+            if (this.state.abortController)
+                newEngine = await ReactNativeEngine.tryCreateAsync({ signal: this.state.abortController.signal });
+            this.setState({ engine: newEngine ?? undefined });
+        }
+
+        componentWillUnmount() {
+            this.state.abortController?.abort();
+            this.state.engine?.dispose();
+        }
+
+        render() {
+            return (
+                <MyComponent { ...this.props } engine={ this.state.engine } />
+            );
+        }
+    };
 }
 //# sourceMappingURL=EngineHook.js.map
